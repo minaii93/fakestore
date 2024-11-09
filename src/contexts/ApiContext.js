@@ -26,6 +26,23 @@ export const ApiProvider = ({children}) => {
         });
          }
     
+
+         function postAdat(vegpont, adat){
+            axios
+            .post(vegpont, adat)
+            .then(function (response) {
+        // handle success
+            console.log(response); //tényleges listát ad vissza
+            
+             })
+            .catch(function (error) {
+        // handle error
+            console.log(error);
+            })
+            .finally(function () {
+        // always executed
+            });
+             }
     useEffect(()=>{
         getAdat("https://fakestoreapi.com/products");
         // a hívás csak egyszer történjen meg ill csak akkor hívódjon újra ha valami változás történik a listában vagy a kérésben
@@ -33,7 +50,7 @@ export const ApiProvider = ({children}) => {
     
 
 
-    return(<ApiContext.Provider value={{termekLista}}>
+    return(<ApiContext.Provider value={{termekLista, postAdat}}>
         {children}
     </ApiContext.Provider>
 

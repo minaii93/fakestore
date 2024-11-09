@@ -1,6 +1,7 @@
 
 import './App.css';
-import Termekek from './components/Termekek';
+import TermekUrlap from './components/Admin/TermekUrlap';
+import Termekek from './components/Public/Termekek';
 
 function App() {
   return (
@@ -8,6 +9,9 @@ function App() {
       <header className="App-header">
        <h1>Fakestrore webáruház</h1>
       </header>
+      <section className= "p-5">
+        <TermekUrlap/>
+      </section>
       <article>
       <Termekek/>
       </article>
