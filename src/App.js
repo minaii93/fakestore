@@ -8,7 +8,10 @@ function App() {
       <header className="App-header">
        <h1>Fakestrore webáruház</h1>
       </header>
+      <article>
       <Termekek/>
+      </article>
+     
     </div>
   );
 }
