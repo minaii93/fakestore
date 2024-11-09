@@ -18,7 +18,7 @@ function TermekUrlap() {
         event.preventDefault() //leszedi az alapért eseménykezelőt - php-s
         //összegyűjtjük az űrlapadatokat, összeállítunk egy objektumot, majd továbbküldjük a szerver felé post kéréssel
         console.log(adat);
-        postAdat('https://fakestoreapi.com/products', adat);
+        postAdat('/products', adat);
     }
 
     function valtKezeles(event) {

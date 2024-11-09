@@ -1,5 +1,6 @@
 import { createContext, useState, useEffect} from "react";
-import axios from "axios";
+import { myAxios } from "./MyAxios";
+
 export const ApiContext = createContext("");
 
 export const ApiProvider = ({children}) => {
@@ -10,7 +11,7 @@ export const ApiProvider = ({children}) => {
 
     //aszinkron hívás axiosszal 
     function getAdat(vegpont){
-        axios
+        myAxios
         .get(vegpont)
         .then(function (response) {
     // handle success
@@ -28,7 +29,7 @@ export const ApiProvider = ({children}) => {
     
 
          function postAdat(vegpont, adat){
-            axios
+            myAxios
             .post(vegpont, adat)
             .then(function (response) {
         // handle success
@@ -44,7 +45,7 @@ export const ApiProvider = ({children}) => {
             });
              }
     useEffect(()=>{
-        getAdat("https://fakestoreapi.com/products");
+        getAdat("/products");
         // a hívás csak egyszer történjen meg ill csak akkor hívódjon újra ha valami változás történik a listában vagy a kérésben
     }, []);
     
