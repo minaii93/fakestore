@@ -42,7 +42,6 @@ function TermekUrlap() {
           />
           
         </div>
-        <button type="submit" className="btn btn-primary">Submit</button>
 
         <div className="mb-3">
           <label htmlFor="price" className="form-label">Termék ára:</label>
@@ -58,7 +57,7 @@ function TermekUrlap() {
           />
           
         </div>
-        <button type="submit" className="btn btn-primary">Submit</button>
+        
         
         <div className="mb-3">
                     <label htmlFor="category" className="form-label">Termék kategória:</label>
